@@ -1,0 +1,11 @@
+--- 
+- 
+  gather_facts: true
+  hosts: window
+  tasks: 
+    - 
+      setup:
+      register: out
+    -
+      debug:
+        var: vars

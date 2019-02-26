@@ -1,0 +1,13 @@
+---
+- name: create a user
+  hosts: all
+
+  tasks:
+   -  name: Create a login user
+      user:
+        name: sirvikk
+        password: admin@123
+        state: present
+        shell: /bin/bash
+        createhome: yes
+        home: /home/sirvikk

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Ansible create file if it doesn't exist example
+    copy:
+      dest: "/root/test.file"
+      content: |
+          file created and contents added to file

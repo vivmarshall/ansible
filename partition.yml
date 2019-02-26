@@ -1,0 +1,12 @@
+--- 
+- 
+  hosts: window
+  name: "creating partion"
+  tasks:
+    - win_partition:
+             offline: false
+             drive_letter: z
+             partition_size: -1
+             disk_number: 2
+             state: present
+
