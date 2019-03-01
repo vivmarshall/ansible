@@ -1,7 +1,6 @@
 ---
-- hosts: all
+- hosts: root@client
+  vars:
+     contents: "{{ lookup('file', '/root/ansible/indata') }}"
   tasks:
-  - name:
-    yum:
-      name: git
-      state: present
+     - command: yum install {{ contents  }} -y
